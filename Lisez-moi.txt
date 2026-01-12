@@ -1,0 +1,139 @@
+
+
+### 📄 `LISEZ-MOI.txt`
+
+
+==================================================
+ GANG TERRITORY SYSTEM — QBCORE EDITION
+ Version 2.0.0
+ Auteur : RP Dev Team
+==================================================
+
+📌 DESCRIPTION
+Système immersif de territoires de gangs pour serveurs FiveM RP.
+Inclut :
+- Détection d'entrée/sortie de zone
+- Alarme visuelle clignotante (écran rouge)
+- Sons personnalisés par gang
+- PNJ hostiles après délai
+- Perte de réputation en zone ennemie
+- Interface F6 pour lancer la capture de zone
+- Webhook Discord (optionnel)
+- Compatible QBCore
+
+--------------------------------------------------
+
+📁 STRUCTURE DU DOSSIER
+gang_territory/
+├── fxmanifest.lua
+├── config.lua
+├── client/
+│   ├── main.lua
+│   ├── menu.lua
+│   └── sounds.lua
+├── server/
+│   └── main.lua
+└── ui/
+    ├── index.html
+    ├── style.css
+    ├── app.js
+    └── sounds/
+        ├── ballas_alert.mp3
+        ├── vagos_alert.mp3
+        └── families_alert.mp3
+
+--------------------------------------------------
+
+⚙️ INSTALLATION
+
+1. PRÉREQUIS
+   - QBCore installé et fonctionnel
+   - Accès au dossier resources de votre serveur
+
+2. INSTALLATION DES FICHIERS
+   - Copiez le dossier `gang_territory` dans `resources/[qb]/`
+   - Assurez-vous que tous les fichiers sont présents
+
+3. CONFIGURATION
+   a) Ouvrez `config.lua` :
+      - Modifiez `Config.DiscordWebhook` si vous utilisez Discord
+      - Ajustez les coordonnées des zones dans `Config.Zones`
+      - Personnalisez les noms de gangs, modèles de PNJ, etc.
+
+   b) Ajoutez des sons MP3 dans `ui/sounds/` :
+      - `ballas_alert.mp3`
+      - `vagos_alert.mp3`
+      - `families_alert.mp3`
+      → Utilisez des sons libres de droits (ex: Freesound.org)
+
+4. DÉMARRAGE
+   Dans votre `server.cfg`, ajoutez :
+      ensure qb-core
+      ensure gang_territory
+
+   Redémarrez votre serveur.
+
+--------------------------------------------------
+
+🎮 UTILISATION EN JEU
+
+- Entrez dans une zone ennemie → écran clignotant + son d'alerte
+- Membres du gang propriétaire reçoivent une notification sonore
+- Appuyez sur F6 près d'une zone → menu de capture
+- Restez dans la zone pour remplir la jauge de capture
+- Si vous êtes civil en zone ennemie :
+   • Votre réputation diminue
+   • Des PNJ hostiles spawnent après 15 secondes
+
+Commande admin (à implémenter) :
+   /creategangzone <gang> <circle/rect> <taille>
+
+--------------------------------------------------
+
+🔧 PERSONNALISATION
+
+- Pour modifier les couleurs de l'alarme :
+   → Éditez `Config.InvasionAlert.flashColor` dans `config.lua`
+
+- Pour désactiver les PNJ :
+   → Mettez `Config.HostileNPCs.enabled = false`
+
+- Pour ajuster la perte de réputation :
+   → Modifiez `Config.Reputation.lossPerSecond`
+
+--------------------------------------------------
+
+⚠️ DÉPANNAGE
+
+Problème : "Ressource ne se charge pas"
+→ Vérifiez que `qb-core` est chargé AVANT `gang_territory`
+
+Problème : Sons qui ne jouent pas
+→ Assurez-vous que les fichiers MP3 existent et sont listés dans `fxmanifest.lua`
+
+Problème : Menu F6 qui ne s'ouvre pas
+→ Vérifiez que `ui/index.html` et `ui/app.js` sont présents
+
+--------------------------------------------------
+
+📜 LICENCE
+Ce script est libre d'utilisation sur vos serveurs RP.
+Merci de garder les crédits à l'auteur.
+
+© RP Dev Team – 2026
+```
+
+---
+
+### ✅ Comment utiliser ce fichier :
+
+1. Copiez tout le texte ci-dessus
+2. Collez-le dans un nouveau fichier texte
+3. Enregistrez-le sous le nom **`LISEZ-MOI.txt`** (ou `README.txt`)
+4. Placez-le à la **racine** de votre dossier `gang_territory`
+
+---
+
+Ce fichier aidera **n’importe quel administrateur** à installer, configurer et dépanner votre système en quelques minutes.
+
+Bonne chance sur votre serveur RP ! 🟥🟩🟦💥

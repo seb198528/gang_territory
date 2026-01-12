@@ -1,0 +1,78 @@
+/* Style moderne sombre - compatible QBCore */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: transparent;
+    color: white;
+    overflow: hidden;
+}
+
+#menu {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    background: rgba(15, 15, 15, 0.95);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    border: 1px solid #333;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#menu h2 {
+    margin: 0 0 16px 0;
+    font-size: 22px;
+    color: #ff4d4d;
+}
+
+#menu p {
+    margin: 0 0 24px 0;
+    font-size: 16px;
+    color: #ccc;
+}
+
+#menu span {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+#capture-btn {
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    color: white;
+}
+
+#close-btn {
+    background: #444;
+    color: #ddd;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+    #menu {
+        width: 90%;
+        padding: 20px;
+    }
+}

@@ -20,3 +20,33 @@
 
 # ---
 
+# 
+
+# \## ✅ Fonctionnalités
+
+# \- Contrôle de territoires par gangs
+
+# \- Système de capture et défense
+
+# \- Récompenses en argent/XP
+
+# \- Notifications en temps réel
+
+# \- Intégration avec qb-hud
+
+# \- Base de données MySQL sécurisée
+
+# \- Configuration facile via `config.lua`
+
+# 
+
+# \## 📥 Installation
+
+# 1\. Place le dossier `gang\_territory` dans `resources/`
+
+# 2\. Ajoute ceci dans ton `server.cfg` :
+
+# &nbsp;  ```cfg
+
+# &nbsp;  ensure gang\_territory
+
